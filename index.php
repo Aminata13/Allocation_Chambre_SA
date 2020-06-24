@@ -7,3 +7,4 @@ require_once('./view/layout/default.php');
 
 // $router = new Router();
 // $router->route();
+echo "je teste";
