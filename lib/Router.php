@@ -5,6 +5,7 @@ class Router {
 
     public function route() {
         try {
+
             //Chargement dynamique des classes, i.e, Autoloading
             spl_autoload_register(function ($class) {
                 $pathModel = "./model/".$class.".php";
@@ -20,11 +21,11 @@ class Router {
                 }
             });
 
-            if(isset($_GET['url'])) {
+            if (isset($_GET['url'])) {
                 $url = explode("/", filter_var($_GET['url'], FILTER_SANITIZE_URL));
                 $controllerFile = ucfirst(strtolower($url[0])).'Controller';
                 $pathController = './controller/'.$controllerFile.'.php';
-                
+    
                 if (file_exists($pathController)) {
                     require_once($pathController);
                     $this->controller = new $controllerFile();
@@ -39,23 +40,22 @@ class Router {
                         $errorCtrl = new ErrorController();
                         $errorCtrl->showError('Cette méthode n\'existe pas');
                     }
-                } 
-                else {
+                } else {
                     $pathController = './controller/ErrorController.php';
                     require_once($pathController);
                     $errorCtrl = new ErrorController();
                     $errorCtrl->showError('Cette page n\'existe pas');
                 }
-            } 
-            else {
-                $pathController = './controller/SecurityController.php';
+            } else {
+                $pathController = './controller/EtudiantController.php';
                 require_once($pathController);
-                $this->controller = new SecurityController();
-                $this->controller->index();
+                $this->controller = new EtudiantController();
+                $this->controller->list();
             }
+            
+            
         } catch (Exception $e) {
             die('Erreur : ' . $e->getMessage());
         }
-        
     }
 }
