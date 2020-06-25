@@ -63,7 +63,7 @@
                             <div class="form-group row">
                                 <div class="col-lg-5" id="inputs">
                                     <div class="row" id="row_0">
-                                        <button type="button" class="btn btn-success" onclick="onAddInput()">+</button>
+                                        <!-- <button type="button" class="btn btn-success" onclick="onAddInput()">+</button> -->
                                     </div>
                                 </div>
                             </div>
