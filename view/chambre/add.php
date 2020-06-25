@@ -16,19 +16,13 @@
         <div class="card-body">
             <form id="create-question-form" method="POST" class="needs-validation" action="javascript:void(0)" novalidate>
                 <div class="form-group row">
-                    <label for="inputNumber" class="col-sm-2 col-form-label" data-toggle="modal" data-target="#questionModal">Numéro</label>
-                    <div class="col-sm-10">
-                        <input required type="text" name="number" class="form-control" id="inputNumber" placeholder="BB-NN">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="building-select" class="col-sm-2 col-form-label">Batiment</label>
+                    <label for="building-select" class="col-sm-2 col-form-label">Bâtiment</label>
                     <div class="col-sm-10">
                         <select required id="building-select" name="building" class="custom-select">
                             <option value="">1</option>
                             <option value="">2</option>
                             <option value="">3</option>
-                            <option value=""4</option>
+                            <option value="">4</option>
                         </select>
                     </div>
                 </div>
@@ -46,8 +40,11 @@
                 </div>
                 <br><br>
                 <div class="form-group row">
-                    <div class="col-sm-10">
-                        <button type="submit" class="btn btn-primary">Enregistrer</button>
+                    <div class="col-sm-6">
+                        <button type="submit" class="btn btn-danger">Annuler</button>
+                    </div>
+                    <div class="col-sm-6">
+                        <button type="submit" class="btn btn-primary btn-submit">Enregistrer</button>
                     </div>
                 </div>
             </form>
@@ -70,7 +67,7 @@
     </div>
 
 
-    <!-- <script src="public/js/newQuestions.js"></script> -->
+    
 </body>
 
 </html>

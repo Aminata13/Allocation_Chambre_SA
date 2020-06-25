@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="public/css/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?= BASE_URL ?>public/css/font-awesome-4.7.0/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="<?= BASE_URL ?>public/css/style1.css">
   <link rel="stylesheet" href="<?= BASE_URL ?>public/css/style.css">
@@ -54,7 +54,7 @@
 
   <!-- Nav Item - Pages Collapse Menu -->
   <li class="nav-item">
-    <a class="nav-link collapsed" href="index.php?page=showStudents">
+    <a class="nav-link collapsed" href="<?= BASE_URL ?>etudiant/list">
       <i class="fa fa-list"></i>
       <span>Liste des Etudiants</span>
     </a>
@@ -62,21 +62,21 @@
 
   <!-- Nav Item - Utilities Collapse Menu -->
   <li class="nav-item">
-    <a class="nav-link collapsed" href="index.php?page=addStudent">
+    <a class="nav-link collapsed" href="<?= BASE_URL ?>etudiant/add">
       <i class="fa fa-plus-square"></i>
       <span>Enregistrer un étudiant</span>
     </a>
   </li>
   <!-- Nav Item - Utilities Collapse Menu -->
   <li class="nav-item">
-    <a class="nav-link collapsed" href="index.php?page=showRooms">
+    <a class="nav-link collapsed" href="<?= BASE_URL ?>chambre/list">
       <i class="fa fa-bed"></i>
       <span>Liste des chambres</span>
     </a>
   </li>
   <!-- Nav Item - Utilities Collapse Menu -->
   <li class="nav-item">
-    <a class="nav-link collapsed" href="index.php?page=addRoom">
+    <a class="nav-link collapsed" href="<?= BASE_URL ?>chambre/add">
       <i class="fa fa-plus-square"></i>
       <span>Enregister une chambre</span>
     </a>
@@ -119,29 +119,7 @@
     </nav>
     <!-- End of Topbar -->
     <div id="admin-container">
-      <?php
-        if (isset($_GET['page'])) {
-            if ($_GET["page"]=="showStudents") {
-    
-                require_once 'view/etudiant/list.php';
-    
-            } elseif ($_GET["page"]=="addStudent") {
-    
-                require_once 'view/etudiant/register.php';
-    
-            } elseif ($_GET["page"]=="showRooms") {
-    
-                require_once 'view/chambre/list.php';
-    
-            } elseif ($_GET["page"]=="addRoom") {
-    
-                require_once 'view/chambre/add.php';
-    
-            } 
-        } else {
-            require_once 'view/etudiant/list.php';
-        }
-      ?>
+      <?php echo $contentForLayout ?>
     </div>
 
 </div>
@@ -175,7 +153,7 @@
 </div>
     
     <script src="<?= BASE_URL ?>public/js/jquery-3.5.1.js"></script>
-    <!-- <script src="<?= BASE_URL ?>public/js/script.js"></script> -->
+    <script src="<?= BASE_URL ?>public/js/script.js"></script>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

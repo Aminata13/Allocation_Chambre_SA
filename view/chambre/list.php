@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="public/css/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <h1 class="h3 mb-0 text-gray-800">Joueurs</h1>
+    <h1 class="h3 mb-0 text-gray-800">Chambres</h1>
         <div class="card shadow list-card mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Liste des Joueurs</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Liste des chambres</h6>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -27,7 +27,7 @@
                                             <option value="15">15</option>
                                             <option value="25">25</option>
                                         </select>
-                                        Joueurs
+                                        Chambres
                                     </label>
                                 </div>
                             </div>
@@ -36,18 +36,18 @@
                             <table class="table table-bordered" id="dataTable" aria-describedby="liste des joueurs">
                                 <thead>
                                 <tr>
-                                    <th scope="col">Nom</th>
-                                    <th scope="col">Prénom</th>
-                                    <th scope="col">Score</th>
+                                    <th scope="col">Numéro</th>
+                                    <th scope="col">Batiment</th>
+                                    <th scope="col">Type</th>
                                     <th scope="col">Modifier</th>
                                     <th scope="col">Bloquer</th>
                                 </tr>
                                 </thead>
                                 <tfoot>
                                 <tr>
-                                    <th scope="col">Nom</th>
-                                    <th scope="col">Prénom</th>
-                                    <th scope="col">Score</th>
+                                    <th scope="col">Numéro</th>
+                                    <th scope="col">Batiment</th>
+                                    <th scope="col">Type</th>
                                     <th scope="col">Modifier</th>
                                     <th scope="col">Bloquer</th> 
                                 </tr>

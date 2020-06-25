@@ -197,6 +197,7 @@ $select.on("change", function () {
                         <i class="fa fa-trash fa-2x" aria-hidden="true"></i>
                     </div>
                 </div>
+<<<<<<< HEAD
             `);
       }
     }
@@ -254,6 +255,36 @@ $("#add-field").on("click", function () {
     }
   }
 });
+=======
+              </div>
+              <hr>
+              <button type="submit" name="inscription" value="inscription" class="btn btn-primary btn-user btn-block btn-signup">
+                S'inscrire
+              </button>
+            </form>
+            <hr>
+            <div id="signup-error"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="modal fade text-center" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <i class="fa fa-check-circle-o fa-3x" aria-hidden="true"></i>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div id="success-text" class="modal-body"></div>
+      </div>
+    </div>
+  </div>
+>>>>>>> 0b8f13dc77c5760de8fc195539b3511c41b85a9b
 
 //delete field when trash icon is clicked
 $answersBlock.on("click", ".delete", function () {
