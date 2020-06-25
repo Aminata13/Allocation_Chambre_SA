@@ -443,3 +443,9 @@ input[type="file"] {
 .radio-row {
   clear: both;
 }
+.label-register {
+  margin-top: 0.5rem;
+}
+#register-form .form-control-user {
+  border-radius: 0.4rem;
+}
