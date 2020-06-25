@@ -50,7 +50,7 @@ class Router {
                 $pathController = './controller/EtudiantController.php';
                 require_once($pathController);
                 $this->controller = new EtudiantController();
-                $this->controller->list();
+                $this->controller->liste();
             }
             
             

@@ -7,7 +7,7 @@ class ChambreController extends Controller {
         $this->validator = new Validator();
     }
 
-    public function list() {
+    public function liste() {
         $this->view = "list";
         $this->render();
     }
