@@ -12,7 +12,7 @@ abstract class Manager implements IDao {
     private function getConnexion() {
         if($this->pdo == null) {
             try {
-                $this->pdo = new PDO('mysql:host=localhost;dbname=projet_poo_mvc;charset=utf8', 'root', '');
+                $this->pdo = new PDO('mysql:host=localhost;dbname=allocation_chambre_sa;charset=utf8', 'root', '');
                 $this->pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
             } catch (PDOException $e) {

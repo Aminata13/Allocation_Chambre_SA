@@ -423,3 +423,23 @@ input[type="file"] {
 .add-room-card {
   width: 70%;
 }
+.btn-submit {
+  float: right;
+}
+.test {
+  overflow: auto;
+}
+.search-row {
+  float: right;
+  margin-right: -3.4rem;
+}
+.search-row input[type="search"] {
+  width: 10rem;
+  margin-left: 1rem;
+}
+.search-row label {
+  margin-top: 0.2rem;
+}
+.radio-row {
+  clear: both;
+}
