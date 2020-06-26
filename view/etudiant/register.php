@@ -56,7 +56,6 @@
                                         <option value="ebl">Boursier Logé</option>
                                         <option value="ebnl">Boursier Non Logé</option>
                                         <option value="enb">Non Boursier</option>
-                                       
                                     </select>
                                 </div>
                             </div>
