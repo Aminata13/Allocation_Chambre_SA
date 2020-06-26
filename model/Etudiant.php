@@ -1,6 +1,6 @@
 <?php
 
-class Etudiant {
+class Etudiant implements IAlloc {
     protected $id;
     protected $matricule;
     protected $nom;

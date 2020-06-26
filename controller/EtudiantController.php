@@ -13,7 +13,7 @@ class EtudiantController extends Controller {
         $this->render();
     }
 
-    public function add() {
+    public function nouveau() {
         $this->view = "register";
         $this->render();
     }

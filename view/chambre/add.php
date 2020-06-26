@@ -14,45 +14,40 @@
             <h6 class="m-0 font-weight-bold text-primary">Paramétrer une chambre</h6>
         </div>
         <div class="card-body">
-            <form id="create-question-form" method="POST" class="needs-validation" action="javascript:void(0)" novalidate>
+            <form id="create-room-form" method="POST" class="needs-validation" action="javascript:void(0)" novalidate>
                 <div class="form-group row">
                     <label for="building-select" class="col-sm-2 col-form-label">Bâtiment</label>
                     <div class="col-sm-10">
-                        <select required id="building-select" name="building" class="custom-select">
-                            <option value="">1</option>
-                            <option value="">2</option>
-                            <option value="">3</option>
-                            <option value="">4</option>
-                        </select>
+                        <input required type="number" name="building" class="form-control" id="inputBuilding" placeholder="Numéro de Bâtiment">
+                        <div class="error-input"><?= @$error['building'] ?></div>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="inputType" class="col-sm-2 col-form-label">Type</label>
                     <div class="col-sm-10">
-                        <select required id="question-type" name="type" class="custom-select">
-                            <option value="solo">Individuel</option>
+                        <select required id="room-type" name="type" class="custom-select">
+                            <option value="">Choisir un type</option>
+                            <option value="individuel">Individuel</option>
                             <option value="double">Double</option>
                         </select>
+                        <div class="error-input"><?= @$error['type'] ?></div>
                     </div>
-                </div>
-                <div id="answers-field">
-
                 </div>
                 <br><br>
                 <div class="form-group row">
                     <div class="col-sm-6">
-                        <button type="submit" class="btn btn-danger">Annuler</button>
+                        <button type="reset" id="btn-cancel" class="btn btn-danger">Annuler</button>
                     </div>
                     <div class="col-sm-6">
-                        <button type="submit" class="btn btn-primary btn-submit">Enregistrer</button>
+                        <input type="submit" class="btn btn-primary btn-submit" value="Enregistrer">
                     </div>
                 </div>
             </form>
-            <div id="create-question-error"></div>
+            <div id="create-chambre-error"></div>
         </div>
     </div>
 
-    <div class="modal fade text-center" id="questionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade text-center" id="roomModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -61,12 +56,13 @@
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div id="" class="modal-body">Question enregistrée avec succès!</div>
+                <div id="" class="modal-body">Chambre enregistrée avec succès!</div>
             </div>
         </div>
     </div>
 
-
+    <script src="<?= BASE_URL ?>public/js/jquery-3.5.1.js"></script>
+    <script src="<?= BASE_URL ?>public/js/newChambre.js"></script>
     
 </body>
 
