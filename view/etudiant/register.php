@@ -43,7 +43,7 @@
                                     <label for="">Date de Naissance</label>
                                 </div>
                                 <div class="col-sm-9">
-                                    <input class="form-control form-control-user" type="date" value="2011-08-19" id="example-date-input" placeholder="Date de naissance">
+                                    <input class="form-control form-control-user" type="date" value="" id="example-date-input" placeholder="Date de naissance">
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -60,12 +60,8 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <div class="col-lg-5" id="inputs">
-                                    <div class="row" id="row_0">
-                                         <button type="button" class="btn btn-success" onclick="onAddInput()">+</button> 
-                                    </div>
-                                </div>
+                            <div id="answers-field">
+                                
                             </div>
 
                             <div class="form-group row">
@@ -101,8 +97,8 @@
     </div>
 
 
-
-    <script src="<?= BASE_URL ?>public/js/register.js"></script>
+    <script src="<?= BASE_URL ?>public/js/jquery-3.5.1.js"></script>
+    <script src="<?= BASE_URL ?>public/js/registerStudent.js"></script>
 
 </body>
 

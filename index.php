@@ -7,3 +7,4 @@ require_once('./lib/Router.php');
 
 $router = new Router();
 $router->route();
+

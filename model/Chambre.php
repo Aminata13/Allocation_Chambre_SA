@@ -1,6 +1,6 @@
 <?php 
 
-class Chambre {
+class Chambre implements IAlloc {
     private $id;
     private $numero;
     private $batiment;
@@ -8,7 +8,18 @@ class Chambre {
     
     private $collectionEtudiant =  [];
 
-    
+    public function __construct($row=null)
+    {
+        if ($row != null) {
+            $this->hydrate($row);
+        }
+    }
+
+    public function hydrate($row) {
+        $this->numero = $row['numero'];
+        $this->batiment = $row['batiment'];
+        $this->type = $row['type'];
+    } 
 
     /**
      * Get the value of id

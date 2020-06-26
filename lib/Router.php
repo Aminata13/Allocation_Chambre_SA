@@ -23,8 +23,8 @@ class Router {
 
             if (isset($_GET['url'])) {
                 $url = explode("/", filter_var($_GET['url'], FILTER_SANITIZE_URL));
-                $controllerFile = ucfirst(strtolower($url[0])).'Controller';
-                $pathController = './controller/'.$controllerFile.'.php';
+                $controllerFile = ucfirst(strtolower($url[0])).'Controller'; 
+                $pathController = './controller/'.$controllerFile.'.php'; 
     
                 if (file_exists($pathController)) {
                     require_once($pathController);
