@@ -32,26 +32,31 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row test">
                             <table class="table table-bordered" id="dataTable" aria-describedby="liste des joueurs">
+                                <!-- tp odddddddddddddddcc -->
                                 <thead>
                                 <tr>
-                                    <th scope="col">Numéro</th>
+                                <th scope="col">Numéro</th>
                                     <th scope="col">Batiment</th>
                                     <th scope="col">Type</th>
                                     <th scope="col">Modifier</th>
-                                    <th scope="col">Bloquer</th>
+                                    <th scope="col">Supprimer</th>
                                 </tr>
                                 </thead>
-                                <tfoot>
-                                <tr>
-                                    <th scope="col">Numéro</th>
-                                    <th scope="col">Batiment</th>
-                                    <th scope="col">Type</th>
-                                    <th scope="col">Modifier</th>
-                                    <th scope="col">Bloquer</th> 
-                                </tr>
-                                </tfoot>
+                                <tbody>
+                                <?php 
+                                        foreach ($chambres as $chambre) {?>
+                                        <tr>
+                                            <td><?=$chambre->getNumero()?></td>
+                                            <td><?=$chambre->getBatiment()?></td>
+                                            <td><?=$chambre->getType()?></td>
+                                            <td><a href="" class="btn btn-primary"><button>modifier</button></a></td>
+                                            <td><a href="" class="btn btn-danger"><button>supprimer</button></a></td>
+                                         </tr><?php
+                                    }
+                                ?>
+                                </tbody>
                                 <tbody id="tbody">
                                 </tbody>
                             </table>

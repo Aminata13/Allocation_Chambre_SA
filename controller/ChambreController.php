@@ -14,6 +14,15 @@ class ChambreController extends Controller
         $this->view = "list";
         $this->render();
     }
+    //modif
+    public function listeChambre(){
+        $this->dao = new ChambreDao();
+        $ch = $this->dao->findAll();
+       
+        $this->dataView['chambres'] = $ch;
+        $this->view = "list";
+        $this->render();
+    }
     public function nouveau()
     {
         $this->view = "add";

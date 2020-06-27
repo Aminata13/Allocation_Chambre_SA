@@ -69,7 +69,7 @@
   </li>
   <!-- Nav Item - Utilities Collapse Menu -->
   <li class="nav-item">
-    <a class="nav-link collapsed" href="<?= BASE_URL ?>chambre/liste">
+    <a class="nav-link collapsed" href="<?= BASE_URL ?>chambre/listeChambre">
       <i class="fa fa-bed"></i>
       <span>Liste des chambres</span>
     </a>

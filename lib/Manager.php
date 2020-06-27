@@ -70,7 +70,8 @@ abstract class Manager implements IDao {
     public function findAll() {
         $sql = "SELECT * FROM $this->tableName";
         $data = $this->executeSelect($sql);
-        var_dump($data);
+        
+        return $data;
     }
 
     public function findById($id) {
