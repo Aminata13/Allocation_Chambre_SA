@@ -16,6 +16,7 @@ class Chambre implements IAlloc {
     }
 
     public function hydrate($row) {
+        $this->id = $row['id'];
         $this->numero = $row['numero'];
         $this->batiment = $row['batiment'];
         $this->type = $row['type'];

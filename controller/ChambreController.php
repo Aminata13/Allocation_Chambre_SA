@@ -23,6 +23,20 @@ class ChambreController extends Controller
         $this->view = "list";
         $this->render();
     }
+    // Modifier chambre
+    public function modifierChambre(){
+        $this->view="list";
+        $this->dao=new ChambreDao();
+        $this->dao->update($_POST);
+        $this->render();
+    }
+     // supprimer chambre
+     public function supprimerChambre(){
+         $this->view="list";
+         $this->dao=new ChambreDao();
+         $this->dao->delete($_POST["id_chambre"]);
+         $this->render();
+    }
     public function nouveau()
     {
         $this->view = "add";
